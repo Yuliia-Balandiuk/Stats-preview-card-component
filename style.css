@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+  --white: #FFFFFF;
+  --grey: #979797;
+  --purple: #AB5CDB;
+  --dark: #1B1937;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  background-color: black;
+}
+
+main, footer {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  width: 327px;
+  margin-top: 50px;
+}
+
+h2, h3 {
+  letter-spacing: 0.5px;
+  color: var(--white);
+  line-height: auto;
+  text-align: center;
+}
+
+p {
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--grey);
+}
+
+.img-box {
+  background:url("assets/Bitmap.jpg") center/cover no-repeat border-box;
+  border-radius: 8px 8px 0 0 ;
+  width: 100%;
+  height: 33vh;
+}
+
+
+.info-wrapper {
+  padding: 20px;
+  background-color: var(--dark);
+  border-radius: 0 0 8px 8px ;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 32px;
+}
+
+.info-wrapper {
+  padding-top: 20px;
+}
+
+.info > p {
+  line-height: 1.5;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+span {
+  color: var(--purple);
+}
+
+.stats-item {
+  margin-top: 30px;
+}
+
+.stats-items p {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 25px;
+}
+
+footer {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+a {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--grey) ;
+}
+
+@media (min-width: 400px) {
+  body {
+    position: fixed;
+    top: 20%;
+    left: 20%;
+  }
+  main {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 1110px;
+  }
+
+  h2, h3, p {
+    text-align: start;
+  }
+
+  .img-box {
+    background:url("assets/Bitmap.jpg") center/cover no-repeat border-box;
+    border-radius: 0 8px 8px 0;
+    width: 100%;
+    height: 446px;
+  }
+  .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px 0 0 8px;
+    padding: 0 50px 0 50px;
+    height: 446px;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .stats-items {
+    display: flex;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+  
+  .stats-item {
+    padding-right: 60px;
+  }
+
+  footer {
+    flex-direction: row;
+    width: 1110px;
+  }
+
+  footer div {
+    margin-left: 20px;
+  }
+}
