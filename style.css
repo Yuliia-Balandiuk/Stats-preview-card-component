@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
 
 :root {
-  --white: #FFFFFF;
   --grey: #979797;
-  --purple: #AB5CDB;
   --dark: #1B1937;
+  --white: #FFFFFF;
+  --purple: #AB5CDB;
 }
 
 * {
@@ -17,55 +17,60 @@ body {
 }
 
 main, footer {
+  width: 327px;
   display: flex;
-  justify-content: center;
   margin: 0 auto;
+  margin-top: 30px;
   align-items: center;
   flex-direction: column;
-  width: 327px;
-  margin-top: 50px;
+  justify-content: center;
 }
 
-h2, h3 {
-  letter-spacing: 0.5px;
-  color: var(--white);
+h1, dd {
   line-height: auto;
   text-align: center;
-}
-
-p {
+  color: var(--white);
   letter-spacing: 0.5px;
-  text-align: center;
+}
+
+p, dt {
   color: var(--grey);
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
-.img-box {
-  background:url("assets/Bitmap.jpg") center/cover no-repeat border-box;
-  border-radius: 8px 8px 0 0 ;
-  width: 100%;
-  height: 33vh;
+.img {
+  overflow: hidden;
+  margin-bottom: -4px;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--purple);
 }
 
+img {
+  opacity: 0.4;
+  height: 240px;
+  object-fit: cover;
+}
 
 .info-wrapper {
   padding: 20px;
+  border-radius: 0 0 8px 8px;
   background-color: var(--dark);
-  border-radius: 0 0 8px 8px ;
 }
 
-h2 {
+h1 {
   font-size: 28px;
   font-weight: bold;
   line-height: 32px;
 }
 
-.info-wrapper {
+.info-wrapper  {
   padding-top: 20px;
 }
 
 .info > p {
-  line-height: 1.5;
   font-size: 15px;
+  line-height: 1.5;
   margin-top: 20px;
 }
 
@@ -74,19 +79,24 @@ span {
 }
 
 .stats-item {
+  display: flex;
+  flex-direction: column-reverse;
   margin-top: 30px;
 }
 
-.stats-items p {
-  font-family: 'Lexend Deca', sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  line-height: 25px;
+.stats-item .number {
+  font-size: 24px;
 }
 
-footer {
-  margin-top: 20px;
-  margin-bottom: 50px;
+dt {
+  font-size: 12px;
+  line-height: 25px;
+  text-transform: uppercase;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+footer div {
+   margin-bottom: 15px;
 }
 
 a {
@@ -100,56 +110,66 @@ a:hover {
 
 @media (min-width: 400px) {
   body {
-    position: fixed;
     top: 20%;
     left: 20%;
+    position: fixed;
   }
   main {
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
     width: 1110px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
   }
 
-  h2, h3, p {
+  h1, p {
     text-align: start;
   }
 
-  .img-box {
-    background:url("assets/Bitmap.jpg") center/cover no-repeat border-box;
-    border-radius: 0 8px 8px 0;
+  .img {
     width: 100%;
     height: 446px;
+    overflow: hidden;
+    margin-bottom: 0px;
+    border-radius: 0 8px 8px 0;
   }
-  .info-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 8px 0 0 8px;
-    padding: 0 50px 0 50px;
+
+  img {
     height: 446px;
   }
 
-  h2 {
+  .info-wrapper {
+    display: flex;
+    height: 446px;
+    flex-direction: column;
+    padding: 0 50px 0 50px;
+    justify-content: center;
+    border-radius: 8px 0 0 8px;
+  }
+
+  h1 {
     font-size: 36px;
     line-height: 44px;
   }
 
-  .stats-items {
+  dl {
     display: flex;
-  }
-
-  h3 {
-    font-size: 24px;
   }
   
   .stats-item {
     padding-right: 60px;
   }
 
+  dt, dd {
+    text-align: start;
+  }
+
+  .stats-item .number {
+    font-size: 24px;
+  }
+
   footer {
-    flex-direction: row;
     width: 1110px;
+    flex-direction: row;
   }
 
   footer div {
